@@ -1,0 +1,13 @@
+# Languages
+# Each language key stands as its language code
+# ################################
+en:
+  languageName: English
+  weight: 1
+# If multilingual, reorganize content across multiple 'pre-language' directories.
+  # contentDir: content/en
+# Secondary language
+# fr:
+#   languageName: Français
+#   weight: 1
+#   contentDir: content/fr

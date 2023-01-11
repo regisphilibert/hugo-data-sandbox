@@ -1,0 +1,19 @@
+# Config Base
+# This is where root config key goes.
+# ###################################
+title: '{siteTitle}'
+baseURL: '{siteURL}'
+DefaultContentLanguage: en
+enableRobotsTXT: true
+disableAliases: true
+# If project needs to build future: 
+# buildFuture: true
+
+# Some bugs related to 404 template https://github.com/gohugoio/hugo/issues/7603
+disableKinds:
+  - '404'
+# googleAnalytics: UA-PROPERTY_ID
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5

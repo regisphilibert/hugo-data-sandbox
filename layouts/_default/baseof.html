@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+    {{ block "addtohead" . }}{{ end }}
+  </head>
+  <body class="twcheck">
+    {{ partial "header.html" . }}
+    <main class="mx-auto max-w-7xl">
+      {{ block "main" . }}
+        
+      {{ end }}
+    </main>
+    {{ partial "footer" . }}
+  </body>
+</html>

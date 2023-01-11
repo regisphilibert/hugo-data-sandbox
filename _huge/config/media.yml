@@ -1,0 +1,13 @@
+# ###############
+# HUGE Media
+# https://github.com/theNewDynamic/huge/wiki/Media
+# ###############
+publish:
+- uploads
+# If imgix is used:
+# imgix: 
+#  domain: imgix.project.net
+#  defaults:
+#    auto: format
+#    ch: Width,DPR
+#    q: 95
