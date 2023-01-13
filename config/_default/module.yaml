@@ -18,6 +18,8 @@ mounts:
   # Huge's config is mounted in the assets directory
   - source: _huge
     target: assets/_huge
+  - source: _prebuild/public
+    target: content
 imports:
   - path: github.com/theNewDynamic/huge
   - path: github.com/theNewDynamic/hugo-module-tnd-forms

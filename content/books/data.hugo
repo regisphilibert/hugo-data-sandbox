@@ -1,0 +1,27 @@
+{{ $output := slice }}
+{{ $query := `*[_type == "book"]{
+  title,
+  'date': publishedAt,
+  'slug': slug.current,
+  'image': editions[0].cover_image.url,
+  'short_description': description,
+  body,
+  'editions': editions[]{
+    publisher,
+    'cover_image': cover_image.asset->url,
+    isbn,
+    asin => asin,
+    binding,
+  },
+}` }}
+{{ with partial "sanity/Fetch" $query }}
+  {{ range . }}
+    {{ $output = $output | append (dict
+      "filename" .slug
+      "format" "toml"
+      "data" (merge . (dict "body" ""))
+      "body" .body  
+    ) }}
+  {{ end }}
+{{ end }}
+{{ return $output }}

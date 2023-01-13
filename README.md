@@ -9,7 +9,7 @@ Search and replace the following {strings} in the project with:
 
 `{siteID}` > Site ID, a string or int with alphanumeric chars (ex: mywebsite)
 `{siteTitle}` > Site Title (ex: My Website)
-`{siteURL}` > Site URL (ex: https://www.mywebsite.com)
+`https://hugo-data-sandbox.netlify.app` > Site URL (ex: https://www.mywebsite.com)
 `{repoURL}` > Git repo domain without protocole (ex: github.com/theNewDynamic/mywebsite)
 ## Setup
 

@@ -1,0 +1,15 @@
+{{ return slice
+  (dict
+    "filename" "my-first-travel"
+    "format" "toml"
+    "data" (dict 
+      "title" "My first Travel"
+    )
+  )
+  (dict
+    "filename" "bogota"
+    "data" (dict 
+      "title" "My second travel"
+    )
+  )
+}}

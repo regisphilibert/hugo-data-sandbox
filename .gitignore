@@ -23,8 +23,10 @@ nbproject/
 # Hugo
 hugo_stats.json
 public
+resources
 
 # Local Netlify folder
 .netlify
 bin/hugo*
 cms_output.json
+

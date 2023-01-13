@@ -1,0 +1,17 @@
+{{ $monsters := slice }}
+{{ with resources.GetRemote "https://monsters-api.netlify.app/?v=2" }} 
+  {{ with .Content | unmarshal }}
+    {{ range . }}
+      {{ $monster := dict
+        "filename" .id
+        "data" (dict
+          "title" .title
+          "img" .img
+        )
+        "body" .content 
+      }}
+      {{ $monsters = $monsters | append $monster }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $monsters }}

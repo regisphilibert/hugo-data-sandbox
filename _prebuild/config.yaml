@@ -1,0 +1,27 @@
+params:
+  tnd_data:
+    quiet: true
+
+module:
+  mounts:
+  - source: ../content
+    target: assets
+  - source: ../content
+    target: layouts/partials
+    excludeFiles: 
+    - "**.md"
+  - source: ../layouts/partials
+    target: layouts/partials
+  imports:
+  - path: github.com/theNewDynamic/hugo-module-tnd-data
+
+caches:
+  getresource:
+    maxAge: 0
+disableKinds:
+- sitemap
+- taxonomy
+- term
+outputs:
+  home:
+  - html

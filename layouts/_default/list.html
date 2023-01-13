@@ -3,7 +3,7 @@
   <h1 class="text-3xl font-bold">{{ .Title }}</h1>
   {{ $paginator := .Paginate .Pages }}
   {{ range $paginator.Pages }}
-    <div class="py-8">
+    <div class="py-2">
       {{ .Render "li" }}
     </div>
   {{ end }}

@@ -1,14 +1,7 @@
 /* Stick footer at the bottom 
 Body should have a <main /> root element
 */
-body{
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-main{
-  flex: 1;
-}
+
 
 // Adds CSS Class to display JS Dependent elements
 // assets/js/nojs.js
