@@ -1,8 +1,8 @@
 # Config Base
 # This is where root config key goes.
 # ###################################
-title: '{siteTitle}'
-baseURL: '{siteURL}'
+title: 'TND Data Sandbox'
+baseURL: 'https://tnd-data-sandbox.netlify.app'
 DefaultContentLanguage: en
 enableRobotsTXT: true
 disableAliases: true
@@ -15,5 +15,5 @@ disableKinds:
 # googleAnalytics: UA-PROPERTY_ID
 sitemap:
   changefreq: monthly
-  filename: sitemap.xml
+  basename: sitemap.xml
   priority: 0.5

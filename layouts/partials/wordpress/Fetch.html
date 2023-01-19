@@ -20,10 +20,10 @@
       {{ something = . }}
     {{ end }}
 */}}
-{{ $url := printf "https://%s.api.sanity.io/v%s/data/query/%s" "ykx7ynrn" "2021-06-07" "production" }}
+{{ $url := printf "http://staging.newvesselpress.com.php73-37.phx1-1.websitetestlink.com/graphql" }}
 {{ $output := "" }}
 {{ $headers := dict
-  "Content-Type" "application/groq"
+  "Content-Type" "application/json"
 }}
 {{ $body := dict "query" $ | jsonify }}
 {{ with $url }}
@@ -32,7 +32,6 @@
     "headers" $headers
     "body" $body
   }}
-
   {{ with $result := resources.GetRemote $url $args }}
     {{ with .Err }}
       {{ warnf (printf "API error: %#v for %s" . $url) }}

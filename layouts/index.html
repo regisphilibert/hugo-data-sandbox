@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div class="tnd-container">
+  {{ printf "%#v" site.Data.testfile }}
   {{ range seq 5 }}
     <div class="prose max-w-none">
       <p>

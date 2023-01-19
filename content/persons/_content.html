@@ -1,0 +1,11 @@
+{{ $persons := slice }}
+{{ $data := site.Data.persons }}
+{{ range $data }}
+  {{ $persons = $persons | append (dict
+    "basename" (urlize .title)
+    "body" .content
+    "format" "json"
+    "data" .
+  ) }}
+{{ end }}
+{{ return $persons }}

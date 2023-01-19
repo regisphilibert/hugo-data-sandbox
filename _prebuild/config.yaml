@@ -2,8 +2,11 @@ params:
   tnd_data:
     quiet: true
 
+cleanDestinationDir: true
 module:
   mounts:
+  - source: assets
+    target: assets
   - source: ../content
     target: assets
   - source: ../content

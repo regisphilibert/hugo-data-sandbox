@@ -37,7 +37,8 @@
   "deploy": "npm run prod:hugo",
   "start": "npm run dev:hugo",
   "cms_test": "node .cloudcannon/config/debug.js",
-  "cms_print": "node .cloudcannon/config/debug.js print"
+  "cms_print": "node .cloudcannon/config/debug.js print",
+  "gen": "bin/hugo* -s _prebuild --cleanDestinationDir"
  },
  "version": "0.1.0"
 }

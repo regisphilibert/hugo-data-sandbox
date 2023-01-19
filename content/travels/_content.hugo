@@ -1,13 +1,13 @@
 {{ return slice
   (dict
-    "filename" "my-first-travel"
-    "format" "toml"
+    "basename" "my-first-travel"
+    "format" "yaml"
     "data" (dict 
       "title" "My first Travel"
     )
   )
   (dict
-    "filename" "bogota"
+    "basename" "bogota"
     "data" (dict 
       "title" "My second travel"
     )

@@ -1,0 +1,36 @@
+{{ $output := slice }}
+{{ $query := `{
+  posts(first: 10) {
+    nodes {
+      title
+      slug
+      content(format: RENDERED)
+      image: featuredImage {
+        node {
+          mediaItemUrl
+        }
+      }
+    }
+  }
+}` }}
+{{ $before := now }}
+{{ with $response := partial "wordpress/Fetch" $query }}
+  {{ with .data.posts.nodes }}
+    {{ $ellapsed := sub now.UnixMilli $before.UnixMilli   }}
+    {{ warnf "Wordpress request for posts took %#v ms" $ellapsed }}
+    {{ range . }}
+      {{ $post := dict 
+        "title" .title
+      }}
+      {{ with .image.node.mediaItemUrl }}
+        {{ $post = merge $post (dict "image" .) }}
+      {{ end }}
+      {{ $output = $output | append (dict
+        "basename" .slug
+        "data" $post
+        "body" .content  
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $output }}

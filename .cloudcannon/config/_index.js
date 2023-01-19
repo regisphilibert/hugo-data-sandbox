@@ -11,7 +11,7 @@ module.exports = {
   },
 
   // If any data file is used to populate select fields,
-  // its base filename below should be used as a truthy key.
+  // its base basename below should be used as a truthy key.
   data_config: {
     // Example for `data/states.yaml`
     states: true

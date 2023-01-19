@@ -1,3 +1,9 @@
 <div class="block p-4 my-4 border">
-  <a class="block" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <div class="flex">
+    {{ with .Params.image }}
+      <img class="shrink-0 w-24 mr-6" src="{{ . }}" alt="">
+    {{ end }}
+    <a class="block" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+
 </div>
