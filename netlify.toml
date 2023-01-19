@@ -1,12 +1,12 @@
 [build]
 publish = "public"
-command = "hugo --minify -e cached"
+command = "hugo -s _prebuild --cleanDestinationDir && hugo --minify"
 
 [build.environment]
   GO_VERSION = "1.14"
   NODE_VERSION = "16.14.0"
-  HUGO_VERSION = "0.92.2"
-  TND_SITE_ID = "{siteID}"
+  HUGO_VERSION = "0.107.0"
+  TND_SITE_ID = "data-sandbox"
 
 [context]
 
@@ -16,12 +16,12 @@ command = "hugo --minify -e cached"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --minify -e cached -D -b $DEPLOY_PRIME_URL"
+command = "hugo -s _prebuild --cleanDestinationDir && hugo --minify -D -b $DEPLOY_PRIME_URL"
 [context.deploy-preview.environment]
 HUGO_ENV = "staging"
 
 [context.branch-deploy]
-command = "hugo --minify -e cached -b $DEPLOY_URL"
+command = "hugo -s _prebuild --cleanDestinationDir && hugo --minify $DEPLOY_URL"
 [context.branch-deploy.environment]
 HUGO_ENV = "staging"
 
