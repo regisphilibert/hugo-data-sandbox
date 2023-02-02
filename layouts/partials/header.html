@@ -1,13 +1,21 @@
-<header class="py-8 mb-8 border-t border-b">
-  <div class="relative tnd-container">
-    <h1 class="text-4xl font-bold hover:smiley"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></h1>
-    {{ partial "nav.html" . }}
-    {{ with partial "func/GetTranslations" . }}
-      <div class="absolute top-0 right-0">
-        {{ range . }}
-        <a class="uppercase hover:text-primary-500" href="{{ .RelPermalink }}">{{ .Language.Lang }}</a>
-        {{ end }}
+<header class="relative py-8 mb-8 border-t border-b">
+  <div class=" tnd-container">
+    <div class="flex items-center justify-between">
+      <h1 class="text-4xl font-bold hover:smiley"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></h1>
+      {{ with site.Data.settings.site_desc }}
+      <div class="my-4 italic">
+        {{ . }}
       </div>
     {{ end }}
+    </div>
+    
+    {{ partial "nav.html" . }}
   </div>
+  {{ with partial "func/GetTranslations" . }}
+    <div class="absolute top-4 right-4">
+      {{ range . }}
+      <a class="uppercase hover:text-primary-500" href="{{ .RelPermalink }}">{{ .Language.Lang }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
 </header>

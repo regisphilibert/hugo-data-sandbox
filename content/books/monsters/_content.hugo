@@ -3,9 +3,9 @@
   {{ with .Content | unmarshal }}
     {{ range . }}
       {{ $monster := dict
-        "basename" .id
+        "destination" .id
         "data" (dict
-          "title" .title
+          "title" (printf "The English %s" .title)
           "img" .img
         )
         "body" .content 

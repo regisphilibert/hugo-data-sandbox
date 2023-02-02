@@ -1,8 +1,0 @@
-- basename: products/white-table
-  data:
-    title: White Table
-    price: 33
-- basename: products/bigger-table
-  data: 
-    title: Bigger Table
-    price: 200

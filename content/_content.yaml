@@ -1,0 +1,11 @@
+- destination: products/white-table
+  data:
+    title: White Table
+    price: 33
+- destination: products/bigger-table
+  data: 
+    title: Bigger Table
+    price: 200
+- destination: data/settings.json
+  data:
+    site_desc: Build Pages from Data NOW!

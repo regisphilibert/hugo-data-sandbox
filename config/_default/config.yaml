@@ -6,6 +6,8 @@ baseURL: 'https://tnd-data-sandbox.netlify.app'
 DefaultContentLanguage: en
 enableRobotsTXT: true
 disableAliases: true
+ignoreFiles:
+- '\_content.html$'
 # If project needs to build future: 
 # buildFuture: true
 

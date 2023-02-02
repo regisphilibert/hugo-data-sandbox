@@ -1,4 +1,4 @@
-- basename: my-first-book
+- destination: my-first-book
   format: yaml
   body: |-
     Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. 
@@ -14,7 +14,7 @@
     Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. 
     Pellentesque ornare sem [lacinia](/here) quam venenatis vestibulum. Donec sed odio dui. 
     Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
-- basename: my-second-book-3
+- destination: my-second-book-3
   format: toml
   data:
     title: My third book

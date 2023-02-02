@@ -19,7 +19,7 @@
     {{ warnf "Sanity request for books took %#v ms" $response.ms }}
     {{ range . }}
       {{ $output = $output | append (dict
-        "basename" .slug
+        "destination" .slug
         "format" "toml"
         "data" (merge . (dict "body" ""))
         "body" .body  

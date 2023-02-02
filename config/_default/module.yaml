@@ -3,6 +3,14 @@
 # https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
 # ################################
 mounts:
+  - source: content
+    target: content
+    lang: en
+    excludeFiles: 
+    - "fr/**.md"
+  - source: content/fr
+    target: content
+    lang: fr
   - source: layouts
     target: layouts
   - source: assets
@@ -20,6 +28,14 @@ mounts:
     target: assets/_huge
   - source: _prebuild/public
     target: content
+    lang: en
+    excludeFiles:
+    - fr/**.md
+  - source: _prebuild/public/fr
+    target: content
+    lang: fr
+  - source: _prebuild/public/data
+    target: data
 imports:
   - path: github.com/theNewDynamic/huge
   - path: github.com/theNewDynamic/hugo-module-tnd-forms

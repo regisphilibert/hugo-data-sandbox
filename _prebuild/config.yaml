@@ -4,6 +4,7 @@ params:
 
 cleanDestinationDir: true
 module:
+  # replacements: github.com/theNewDynamic/hugo-module-tnd-data -> /Users/regisphilibert/Boulot/tnd/hugo-module-tnd-data
   mounts:
   - source: assets
     target: assets

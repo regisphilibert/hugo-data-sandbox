@@ -1,0 +1,36 @@
+{{ $home_en := "" }}
+{{ $home_fr := "" }}
+{{ with resources.GetRemote "https://raw.githubusercontent.com/theNewDynamic/hugo-module-tnd-data/main/README.md" }}
+  {{ $home_en = dict
+    "destination" "_index.md"
+    "data" (dict
+      "title" "Home"
+    )
+    "body" (print
+      `This is the testing sandbox of the [TND Hugo Data Module](https://github.com/theNewDynamic/hugo-module-tnd-data). Its README.md reads as follow: `
+      "\n"
+      .Content
+    )
+  }}
+  {{ $home_fr = dict
+    "destination" "fr/_index.md"
+    "data" (dict
+      "title" "Accueil"
+    )
+    "body" (print
+      `Ceci est la sandbox de text du module [TND Hugo Data Module](https://github.com/theNewDynamic/hugo-module-tnd-data). Son README.md en anglais: `
+      "\n"
+      .Content
+    )
+  }}
+{{ end }}
+{{ $data := dict
+  "destination" "root-test"
+  "format" "yaml"
+  "data" (dict
+    "title" "Root Test here"
+  )
+  "body" "Hello!"
+}}
+
+{{ return slice $data $home_en $home_fr }}

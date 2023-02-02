@@ -1,8 +1,8 @@
 {{ $persons := slice }}
 {{ $data := site.Data.persons }}
-{{ range $data }}
+{{ range first 10 $data }}
   {{ $persons = $persons | append (dict
-    "basename" (urlize .title)
+    "destination" (printf "/%s/" (urlize .title))
     "body" .content
     "format" "json"
     "data" .
