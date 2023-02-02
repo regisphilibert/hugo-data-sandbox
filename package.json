@@ -20,10 +20,10 @@
  ],
  "license": "ISC",
  "main": "index.js",
- "name": "{siteID}",
+ "name": "tnd-data-sandbox",
  "repository": {
   "type": "git",
-  "url": "{repoURL}"
+  "url": "https://github.com/regisphilibert/hugo-data-sandbox"
  },
  "scripts": {
   "gethugo": "bash get-hugo.sh",
